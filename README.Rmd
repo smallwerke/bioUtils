@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-**NOTE: these are some basic functions that I find useful, they are currently not under development and do not perform extensive (or any) error checks on inputs, basic help pages are provided.**
+**NOTE: these are some basic functions that I find useful, they are currently under very gradual development and do not perform extensive (or any) error checks on inputs, basic help pages are provided.**
 
 # bioUtils
 

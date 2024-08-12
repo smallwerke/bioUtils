@@ -2,8 +2,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 **NOTE: these are some basic functions that I find useful, they are
-currently not under development and do not perform extensive (or any)
-error checks on inputs, basic help pages are provided.**
+currently under very gradual development and do not perform extensive
+(or any) error checks on inputs, basic help pages are provided.**
 
 # bioUtils
 
