@@ -4,7 +4,7 @@
 \alias{CTtoRE}
 \title{CT to RE}
 \usage{
-CTtoRE(CTvals, ctrl, hskp)
+CTtoRE(CTvals, ctrl, hskp, CTund = NULL)
 }
 \arguments{
 \item{CTvals}{the ct values under examination from the RQdeltaCT package}
@@ -12,6 +12,8 @@ CTtoRE(CTvals, ctrl, hskp)
 \item{ctrl}{string defining the control group in the CTvals tibble (Group col)}
 
 \item{hskp}{string defining the housekeeping gene in the CTvals tibble (which Gene col)}
+
+\item{CTund}{optional the ct values initially loaded by RQdletaCT before any filtering was carried out, this is used to set individual RE values to NA if Undetermined in original import}
 }
 \value{
 a tibble containing 5 rows with the calculated data

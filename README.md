@@ -8,6 +8,7 @@ currently under very gradual development and do not perform extensive
 # bioUtils
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The goal of bioUtils is to provide easy distribution and implementation
@@ -45,4 +46,16 @@ determine the deltaCT, 2^-(delta delta CT), and the relative expression
 values based off of the housekeeping gene and control group that is
 specified.
 
-A tibble containing two lists and three tibbles is returned.
+Typically the missing (Undtermined) values will be replaced by their
+group mean for calculation purposes in the RQdeltaCT script in order for
+most of the features to function. This can be misleading when loading
+the data into a figure in R or Prism or whatever that displays all
+individual data points. Setting them to NA is an option when calculating
+the relative expression values.
+
+If you supply an optional argument containing your initial CT values as
+loaded by RQdeltaCT then all results that had an ***Undetermined***
+value will be set to ‘NA’ in a separate RE tibble in the return data for
+easier loading into R.
+
+A tibble containing two lists and three to four tibbles is returned.
