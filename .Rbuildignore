@@ -1,4 +1,7 @@
+^renv$
+^renv\.lock$
 ^bioUtils\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^LICENSE\.md$
+^PACKAGE_MANAGEMENT\.R$

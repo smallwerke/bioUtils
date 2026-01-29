@@ -31,6 +31,10 @@ You can install the development version of bioUtils from [GitHub](https://github
 devtools::install_github("smallwerke/bioUtils")
 ```
 
+## renv
+
+This package is now using renv for management... I have not yet used this for package development and am trying it out here in a very basic setup. Ideally nothing should change within the GitHub repo as all renv related files and folders are not being committed. I went ahead and included the `PACKAGE_MANAGEMENT.R` file within this repo - the file contains the basic R commands I use to manage this package development. It is not included in the package testing or build but just uploaded as a reference. Hopefully this makes maintenance and updating easier... [renv overview](https://rstudio.github.io/renv/articles/packages.html)
+
 ## MAN pages
 
 I will be trying to keep the manual pages for each function relatively up to date and helpful. Please refer to / access them 

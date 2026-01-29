@@ -8,7 +8,7 @@ Description: This is a collection of functions that have been useful in routine 
 License: AGPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.3
 Imports: 
     data.table,
     dplyr,
@@ -16,3 +16,6 @@ Imports:
     rlang,
     RQdeltaCT,
     tibble
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
