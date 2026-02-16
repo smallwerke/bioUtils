@@ -47,7 +47,8 @@ CTtoRE <- function(CTvals, ctrl, hskp, CTund = NULL) {
 
     #print("RUNNING CTtoRE")
     # determine the mean CT for the control group
-    CTvals.ctrl.mean = CTvals %>% dplyr::filter(.data$Group == ctrl) %>% dplyr::summarize(dplyr::across(dplyr::where(is.numeric), mean)) %>% dplyr::select(-dplyr::any_of(c("Group", "Sample")))
+    # currently processing data and simply dropping NA values from the control group instead of dropping the entire group (previous behavior)
+    CTvals.ctrl.mean = CTvals %>% dplyr::filter(.data$Group == ctrl) %>% dplyr::summarize(dplyr::across(dplyr::where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% dplyr::select(-dplyr::any_of(c("Group", "Sample")))
 
     # take the submitted CT values
     CTvals.dCT <- RQdeltaCT::delta_Ct(data = CTvals,
