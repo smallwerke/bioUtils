@@ -71,3 +71,10 @@ value will be set to ‘NA’ in a separate RE tibble in the return data for
 easier loading into R.
 
 A tibble containing two lists and three to four tibbles is returned.
+
+## Changelog
+
+### Feb 16, 2026: 0.0.0.9002
+
+- found an issue where an entire gene was returning as `NA` if any of
+  the control group samples had `NA` values, updated to ignore NA values
