@@ -66,7 +66,7 @@ CTtoRE <- function(CTvals, ctrl, hskp, CTund = NULL) {
     }
 
     # calculate the average of all control groups for each gene
-    CTvals.ddCT.ctrl.mean = CTvals.ddCT %>% dplyr::filter(.data$Group == ctrl) %>% dplyr::summarize(dplyr::across(dplyr::where(is.numeric), mean)) %>% dplyr::select(-dplyr::any_of(c("Group", "Sample")))
+    CTvals.ddCT.ctrl.mean = CTvals.ddCT %>% dplyr::filter(.data$Group == ctrl) %>% dplyr::summarize(dplyr::across(dplyr::where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% dplyr::select(-dplyr::any_of(c("Group", "Sample")))
     # make a copy of the ddCt values and then replace them column by column with RE
     CTvals.RE = CTvals.ddCT
     for (c in colnames(CTvals.ddCT.ctrl.mean)) {

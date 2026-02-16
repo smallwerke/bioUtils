@@ -74,7 +74,8 @@ A tibble containing two lists and three to four tibbles is returned.
 
 ## Changelog
 
-### Feb 16, 2026: 0.0.0.9002
+### Feb 16, 2026: 0.0.0.9003
 
-- found an issue where an entire gene was returning as `NA` if any of
-  the control group samples had `NA` values, updated to ignore NA values
+- found two issues where an entire gene was returning as `NA` if any of
+  the control group samples had `NA` values, updated twice (9002 & 9003)
+  to ignore NA values
